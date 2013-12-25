@@ -1,0 +1,6 @@
+{
+    "dsn": "mysql:dbname=test;host=localhost",
+    "user": "",
+    "password": "",
+    "encoding": "utf8"
+}
