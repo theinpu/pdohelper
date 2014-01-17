@@ -5,15 +5,15 @@
  * Time: 21:56
  */
 
-namespace aascms\tests\PDO;
+namespace bc\tests\pdo;
 
-use aascms\PDO\PDOHelper;
+use bc\pdo\PDOHelper;
 
 class PDOHelperTest extends \PHPUnit_Framework_TestCase {
 
     public function testPDO() {
         $pdo = PDOHelper::getPDO();
-        $this->assertInstanceOf('\\PDO', $pdo);
+        $this->assertInstanceOf('\\pdo', $pdo);
 
         $stmt = $pdo->prepare("SHOW TABLES");
         $stmt->execute();

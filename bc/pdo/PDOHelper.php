@@ -5,9 +5,9 @@
  * Time: 21:43
  */
 
-namespace aascms\PDO;
+namespace bc\pdo;
 
-use aascms\Config\ConfigManager;
+use bc\Config\ConfigManager;
 use PDO;
 
 class PDOHelper {
@@ -19,7 +19,7 @@ class PDOHelper {
      */
     public static function getPDO() {
         if(is_null(self::$PDO)) {
-            $cfg = ConfigManager::get('cfg/pdo.json');
+            $cfg = ConfigManager::get('config/pdo.json');
             self::$PDO = new PDO(
                 $cfg->get('dsn'), $cfg->get('user'), $cfg->get('password')
             );
