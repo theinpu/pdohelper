@@ -7,7 +7,7 @@
 
 namespace bc\pdo;
 
-use bc\Config\ConfigManager;
+use bc\config\ConfigManager;
 use PDO;
 
 class PDOHelper {
@@ -19,7 +19,7 @@ class PDOHelper {
      */
     public static function getPDO() {
         if(is_null(self::$PDO)) {
-            $cfg = ConfigManager::get('config/pdo.json');
+            $cfg = ConfigManager::get('config/pdo');
             self::$PDO = new PDO(
                 $cfg->get('dsn'), $cfg->get('user'), $cfg->get('password')
             );
